@@ -72,6 +72,18 @@
 		<br/>
 		<h1>GreenZeta 10 Minute Progressive Web App</h1>
 	</div>
+
+	<script type="text/javascript">
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('service-worker.js').then(registration => {
+					console.log('SW registered: ', registration);
+				}).catch(registrationError => {
+					console.log('SW registration failed: ', registrationError);
+				});
+			});
+		}
+	</script>
 	
 </body>
 </html>

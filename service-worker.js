@@ -13,7 +13,6 @@ self.addEventListener('install', function(event){
 
 self.addEventListener('activate', function(event){
     console.log('[SW] activating...');
-    // LOOK THIS UP
     self.clients.claim();
 });
 
